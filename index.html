@@ -3,717 +3,148 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Dr. Şüheda Baran'ın kişisel akademik web sitesi. Uluslararası ticaret, döngüsel ekonomi, sürdürülebilir kalkınma ve yeşil tedarik zinciri araştırmaları.">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dr. Şüheda Baran'ın akademik web sitesi. Uluslararası ticaret, döngüsel ekonomi, sürdürülebilir kalkınma, yayınlar ve akademik çalışmalar.">
 <title>Dr. Şüheda Baran | Akademik Web Sitesi</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
-:root {
+:root{
   --green:#102e22;
-  --dark:#0a241a;
+  --deep:#08251b;
   --cream:#f5f0e6;
   --ink:#14251c;
+  --muted:#60685f;
   --line:#d7d0c4;
-  --muted:#646a62;
 }
-
-* {
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html {
-  scroll-behavior:smooth;
-  scroll-padding-top:80px;
-}
-
-body {
-  background:var(--cream);
-  color:var(--ink);
-  font-family:"DM Sans",sans-serif;
-  line-height:1.6;
-}
-
-a {
-  text-decoration:none;
-  color:inherit;
-}
-
-h1,h2,h3 {
-  font-family:"Playfair Display",serif;
-  font-weight:400;
-  line-height:1.2;
-}
-
-.container {
-  max-width:1450px;
-  margin:auto;
-  padding:0 5%;
-}
-
-.label {
-  font-size:11px;
-  letter-spacing:2.6px;
-  text-transform:uppercase;
-  margin-bottom:23px;
-  font-weight:600;
-}
-
-button {
-  font:inherit;
-  cursor:pointer;
-}
-
-/* ÜST MENÜ */
-
-header {
-  background:var(--green);
-  color:white;
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-
-.nav {
-  height:66px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-}
-
-.logo {
-  font-family:"Playfair Display",serif;
-  font-size:25px;
-  white-space:nowrap;
-}
-
-nav {
-  display:flex;
-  gap:27px;
-  align-items:center;
-}
-
-nav a {
-  font-size:12px;
-  transition:color .3s;
-}
-
-nav a:hover {
-  color:#c4d7b6;
-}
-
-.menu-btn {
-  display:none;
-  border:0;
-  background:none;
-  color:white;
-  font-size:26px;
-}
-
-/* GİRİŞ BÖLÜMÜ */
-
-.hero {
-  display:grid;
-  grid-template-columns:50% 50%;
-  min-height:540px;
-  overflow:hidden;
-}
-
-.hero-left {
-  padding:65px 7% 45px 12%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.hero h1 {
-  font-size:clamp(40px,4vw,67px);
-  letter-spacing:-2px;
-  margin-bottom:23px;
-}
-
-.hero-subtitle {
-  font-family:"Playfair Display",serif;
-  font-size:clamp(18px,1.6vw,23px);
-  line-height:1.45;
-  margin-bottom:20px;
-  max-width:560px;
-}
-
-.hero-description {
-  font-size:13px;
-  line-height:1.9;
-  max-width:540px;
-  margin-bottom:30px;
-  color:#424a42;
-}
-
-.buttons {
-  display:flex;
-  gap:17px;
-  flex-wrap:wrap;
-}
-
-.btn {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:13px 22px;
-  border:1px solid var(--green);
-  font-size:12px;
-  transition:.3s;
-}
-
-.btn.primary {
-  background:var(--green);
-  color:white;
-}
-
-.btn:hover {
-  background:#315441;
-  color:white;
-}
-
-/* AKADEMİK PROFİLLER */
-
-.social {
-  display:flex;
-  gap:17px;
-  flex-wrap:wrap;
-  margin-top:38px;
-}
-
-.social a {
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  font-size:11px;
-  transition:transform .2s,color .2s;
-}
-
-.social a:hover {
-  color:#547c58;
-  transform:translateY(-2px);
-}
-
-.social-icon {
-  width:25px;
-  height:25px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:var(--green);
-  color:white;
-  font-weight:700;
-  font-size:11px;
-}
-
-.social-icon.orcid {
-  background:#a6ce39;
-  color:#153016;
-}
-
-.social-icon.linkedin {
-  background:#0a66c2;
-}
-
-/* FOTOĞRAF VE KEMER */
-
-.hero-right {
-  position:relative;
-  min-height:540px;
-  background:linear-gradient(
-    110deg,
-    #48664e 0%,
-    #183b2a 55%,
-    #102e22 100%
-  );
-  overflow:hidden;
-}
-
-.arch {
-  position:absolute;
-  width:49%;
-  height:88%;
-  right:3%;
-  bottom:0;
-  background:#0b2c20;
-  border:28px solid #c0ad8e;
-  border-bottom:0;
-  border-radius:240px 240px 0 0;
-  box-shadow:inset 0 0 35px #0005;
-}
-
-.plant {
-  position:absolute;
-  font-size:145px;
-  opacity:.25;
-  filter:blur(2px);
-  user-select:none;
-}
-
-.plant.one {
-  right:-45px;
-  bottom:-45px;
-  transform:rotate(-25deg);
-}
-
-.plant.two {
-  left:-40px;
-  top:45px;
-  transform:rotate(25deg);
-}
-
-/*
-  FOTOĞRAF:
-  portrait.png dosyasının
-  arka planı şeffaf olmalı.
-*/
-
-.portrait {
-  position:absolute;
-  bottom:0;
-  left:4%;
-  height:94%;
-  width:75%;
-  object-fit:contain;
-  object-position:bottom;
-  z-index:2;
-}
-
-.hero-quote {
-  position:absolute;
-  top:27%;
-  right:5%;
-  z-index:3;
-  color:white;
-  font-family:"Playfair Display",serif;
-  font-style:italic;
-  font-size:15px;
-  line-height:1.8;
-  text-shadow:0 2px 8px #0009;
-}
-
-/* ARAŞTIRMA ALANLARI */
-
-.research {
-  padding:65px 0;
-}
-
-.research-layout {
-  display:grid;
-  grid-template-columns:36% 64%;
-  gap:25px;
-}
-
-.research-title h2 {
-  font-size:clamp(28px,3vw,42px);
-  line-height:1.3;
-}
-
-.research-cards {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-}
-
-.research-card {
-  border-left:1px solid var(--line);
-  padding:0 24px;
-}
-
-.circle {
-  width:54px;
-  height:54px;
-  border:1px solid #a8b3a5;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:27px;
-  margin-bottom:22px;
-}
-
-.research-card h3 {
-  font-size:19px;
-  margin-bottom:13px;
-}
-
-.research-card p {
-  font-size:12px;
-  line-height:1.8;
-  margin-bottom:20px;
-  color:#555d54;
-}
-
-.learn {
-  display:inline-block;
-  font-size:12px;
-  border-bottom:1px solid transparent;
-}
-
-.learn:hover {
-  border-color:var(--green);
-}
-
-/* AKADEMİK ODAK */
-
-.impact {
-  display:grid;
-  grid-template-columns:43% 57%;
-  min-height:265px;
-}
-
-.impact-image {
-  background:
-    linear-gradient(#0b271644,#0b271677),
-    url("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85")
-    center/cover;
-  display:flex;
-  align-items:center;
-  padding:45px 12%;
-  color:white;
-}
-
-.impact-image p {
-  font-family:"Playfair Display",serif;
-  font-style:italic;
-  font-size:27px;
-  line-height:1.35;
-}
-
-.impact-right {
-  background:var(--green);
-  color:white;
-  padding:50px 8%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.stats {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-}
-
-.stat {
-  border-right:1px solid #ffffff44;
-  padding:0 16px;
-}
-
-.stat:first-child {
-  padding-left:0;
-}
-
-.stat:last-child {
-  border:0;
-}
-
-.stat strong {
-  display:block;
-  font-family:"Playfair Display",serif;
-  font-size:39px;
-  font-weight:400;
-}
-
-.stat span {
-  font-size:11px;
-  line-height:1.5;
-}
-
-/* YAYINLAR */
-
-.publications {
-  padding:75px 0;
-}
-
-.pub-layout {
-  display:grid;
-  grid-template-columns:23% 77%;
-  gap:20px;
-}
-
-.pub-heading h2 {
-  font-size:39px;
-}
-
-.pub-cards {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-}
-
-.pub-card {
-  border-left:1px solid var(--line);
-  padding:5px 23px;
-}
-
-.pub-year {
-  font-size:11px;
-  margin-bottom:15px;
-  color:var(--muted);
-}
-
-.pub-card h3 {
-  font-size:17px;
-  line-height:1.5;
-  margin-bottom:15px;
-}
-
-.pub-card em {
-  display:block;
-  font-family:"Playfair Display",serif;
-  font-size:12px;
-  margin-bottom:22px;
-  color:var(--muted);
-}
-
-/* DERSLER */
-
-.teaching {
-  display:grid;
-  grid-template-columns:43% 57%;
-  background:#eee8dc;
-}
-
-.teaching-photo {
-  min-height:310px;
-  background:
-    url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=85")
-    center/cover;
-}
-
-.teaching-content {
-  padding:48px 8%;
-  display:grid;
-  grid-template-columns:55% 45%;
-  gap:30px;
-}
-
-.teaching h2 {
-  font-size:36px;
-  margin-bottom:20px;
-}
-
-.courses {
-  list-style:none;
-  font-size:13px;
-  line-height:2.2;
-}
-
-.upcoming {
-  border-left:1px solid var(--line);
-  padding-left:28px;
-  font-size:12px;
-  line-height:1.9;
-}
-
-/* İLETİŞİM */
-
-.banner {
-  background:
-    linear-gradient(90deg,#08291fe8,#08291fa8),
-    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=85")
-    center/cover;
-  color:white;
-  padding:60px 0;
-}
-
-.banner-inner {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:30px;
-}
-
-.banner h2 {
-  font-style:italic;
-  font-size:26px;
-  line-height:1.5;
-}
-
-.banner a {
-  border:1px solid white;
-  padding:15px 35px;
-  font-size:12px;
-  transition:.3s;
-}
-
-.banner a:hover {
-  background:white;
-  color:var(--green);
-}
-
-/* ALT BİLGİ */
-
-footer {
-  background:#08251b;
-  color:#d6e0d6;
-  padding:27px 0;
-  font-size:11px;
-}
-
-.footer-inner {
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-}
-
-/* TELEFON VE TABLET */
-
-@media(max-width:950px) {
-
-  .menu-btn {
-    display:block;
-  }
-
-  nav {
-    display:none;
-    position:absolute;
-    top:66px;
-    left:0;
-    right:0;
-    background:var(--green);
-    padding:25px;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  nav.open {
-    display:flex;
-  }
-
-  .hero {
-    grid-template-columns:1fr;
-  }
-
-  .hero-left {
-    padding:65px 6%;
-  }
-
-  .hero-right {
-    min-height:480px;
-  }
-
-  .research-layout,
-  .impact,
-  .pub-layout,
-  .teaching {
-    grid-template-columns:1fr;
-  }
-
-  .research-cards {
-    margin-top:25px;
-  }
-
-  .teaching-content {
-    padding:40px 6%;
-  }
-}
-
-@media(max-width:600px) {
-
-  .logo {
-    font-size:21px;
-  }
-
-  .hero h1 {
-    font-size:44px;
-  }
-
-  .hero-right {
-    min-height:410px;
-  }
-
-  .hero-quote {
-    font-size:11px;
-    right:3%;
-  }
-
-  .portrait {
-    left:-8%;
-    width:95%;
-  }
-
-  .arch {
-    border-width:17px;
-  }
-
-  .research-cards,
-  .pub-cards {
-    grid-template-columns:1fr;
-    gap:25px;
-  }
-
-  .research-card,
-  .pub-card {
-    border-left:0;
-    border-top:1px solid var(--line);
-    padding:20px 0;
-  }
-
-  .stats {
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-  }
-
-  .stat:nth-child(2) {
-    border:0;
-  }
-
-  .teaching-content {
-    grid-template-columns:1fr;
-  }
-
-  .upcoming {
-    border-left:0;
-    border-top:1px solid var(--line);
-    padding:20px 0;
-  }
-
-  .banner-inner,
-  .footer-inner {
-    flex-direction:column;
-    align-items:flex-start;
-  }
-}
-
-@media(prefers-reduced-motion:reduce) {
-  html {
-    scroll-behavior:auto;
-  }
-}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:400;line-height:1.22}
+.container{max-width:1450px;margin:auto;padding:0 5%}
+.label{font-size:10px;font-weight:600;letter-spacing:2.7px;text-transform:uppercase;margin-bottom:23px}
+header{background:var(--green);color:#fff;position:sticky;top:0;z-index:100}
+.nav{height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font:25px "Playfair Display",serif;white-space:nowrap}
+nav{display:flex;gap:25px;align-items:center}
+nav a{font-size:12px;transition:color .2s}
+nav a:hover{color:#c5d9b8}
+.menu-btn{display:none;background:none;border:0;color:white;font-size:27px}
+.hero{display:grid;grid-template-columns:50% 50%;min-height:540px;overflow:hidden}
+.hero-left{padding:65px 7% 45px 12%;display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(40px,4vw,65px);letter-spacing:-2px;margin-bottom:22px}
+.hero-subtitle{font:clamp(18px,1.6vw,23px)/1.5 "Playfair Display",serif;margin-bottom:19px;max-width:550px}
+.hero-description{font-size:13px;line-height:1.9;color:#424a42;max-width:540px;margin-bottom:28px}
+.buttons{display:flex;gap:15px;flex-wrap:wrap}
+.btn{display:inline-flex;padding:13px 22px;border:1px solid var(--green);font-size:12px;transition:.2s}
+.btn.primary{background:var(--green);color:#fff}
+.btn:hover{background:#315441;color:white}
+.social{display:flex;flex-wrap:wrap;gap:17px;margin-top:36px}
+.social a{display:inline-flex;align-items:center;gap:7px;font-size:11px}
+.social a:hover{text-decoration:underline}
+.social-icon{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border-radius:50%;background:var(--green);color:white;font-weight:700;font-size:11px}
+.social-icon.orcid{background:#a6ce39;color:#153016}
+.social-icon.linkedin{background:#0a66c2}
+.hero-right{position:relative;min-height:540px;background:linear-gradient(110deg,#48664e,#183b2a 55%,#102e22);overflow:hidden}
+.arch{position:absolute;width:49%;height:88%;right:3%;bottom:0;background:#0b2c20;border:28px solid #c0ad8e;border-bottom:0;border-radius:240px 240px 0 0;box-shadow:inset 0 0 35px #0005}
+.plant{position:absolute;font-size:145px;opacity:.25;filter:blur(2px);user-select:none}
+.plant.one{right:-45px;bottom:-45px;transform:rotate(-25deg)}
+.plant.two{left:-40px;top:45px;transform:rotate(25deg)}
+.portrait{position:absolute;bottom:0;left:4%;height:94%;width:75%;object-fit:contain;object-position:bottom;z-index:2}
+.hero-quote{position:absolute;top:27%;right:5%;z-index:3;color:white;font:italic 15px/1.8 "Playfair Display",serif;text-shadow:0 2px 8px #0009}
+.research{padding:65px 0}
+.research-layout{display:grid;grid-template-columns:36% 64%;gap:25px}
+.research-title h2{font-size:clamp(28px,3vw,42px);line-height:1.3}
+.research-cards{display:grid;grid-template-columns:repeat(3,1fr)}
+.research-card{border-left:1px solid var(--line);padding:0 23px}
+.circle{width:54px;height:54px;border:1px solid #a8b3a5;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:22px}
+.research-card h3{font-size:19px;margin-bottom:13px}
+.research-card p{font-size:12px;line-height:1.8;color:var(--muted);margin-bottom:18px}
+.learn{font-size:12px}
+.learn:hover{text-decoration:underline}
+.impact{display:grid;grid-template-columns:43% 57%;min-height:265px}
+.impact-image{background:linear-gradient(#0b271644,#0b271677),url("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85") center/cover;display:flex;align-items:center;padding:45px 12%;color:white}
+.impact-image p{font:italic 27px/1.35 "Playfair Display",serif}
+.impact-right{background:var(--green);color:white;padding:50px 8%;display:flex;flex-direction:column;justify-content:center}
+.stats{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{border-right:1px solid #ffffff44;padding:0 16px}
+.stat:first-child{padding-left:0}
+.stat:last-child{border:0}
+.stat strong{display:block;font:39px "Playfair Display",serif}
+.stat span{font-size:11px;line-height:1.5}
+.publications{padding:75px 0}
+.pub-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
+.pub-top h2{font-size:clamp(30px,3.5vw,46px);margin-bottom:15px}
+.pub-intro{font-size:13px;line-height:1.8;max-width:650px;color:var(--muted)}
+.pub-profile{font-size:12px;white-space:nowrap;border-bottom:1px solid var(--green);padding-bottom:5px}
+.pub-filters{display:flex;flex-wrap:wrap;gap:9px;padding-bottom:25px;border-bottom:1px solid var(--line)}
+.pub-filter{background:transparent;color:var(--green);border:1px solid #c6c9bf;border-radius:25px;padding:10px 17px;font-size:12px;transition:.2s}
+.pub-filter.active,.pub-filter:hover{background:var(--green);color:white;border-color:var(--green)}
+.publication-item{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:25px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+.publication-year{font:25px "Playfair Display",serif;color:#59715d}
+.publication-type{display:inline-block;color:#59715d;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:9px}
+.publication-item h3{font-size:19px;line-height:1.45;margin-bottom:9px}
+.publication-authors,.publication-source{font-size:12px;line-height:1.7;color:var(--muted)}
+.publication-link{font-size:12px;white-space:nowrap;border-bottom:1px solid var(--green);padding-bottom:4px;margin-top:25px}
+.pub-count{margin-top:20px;color:var(--muted);font-size:12px}
+.pub-bottom{display:flex;flex-wrap:wrap;gap:25px;margin-top:35px;font-size:12px}
+.pub-bottom a{border-bottom:1px solid var(--green);padding-bottom:5px}
+.teaching{display:grid;grid-template-columns:43% 57%;background:#eee8dc}
+.teaching-photo{min-height:310px;background:url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=85") center/cover}
+.teaching-content{padding:48px 8%;display:grid;grid-template-columns:55% 45%;gap:30px}
+.teaching h2{font-size:36px;margin-bottom:20px}
+.courses{list-style:none;font-size:13px;line-height:2.2}
+.upcoming{border-left:1px solid var(--line);padding-left:28px;font-size:12px;line-height:1.9}
+.banner{background:linear-gradient(90deg,#08291fe8,#08291fa8),url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=85") center/cover;color:white;padding:60px 0}
+.banner-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.banner h2{font-style:italic;font-size:26px;line-height:1.5}
+.banner a{border:1px solid white;padding:15px 35px;font-size:12px}
+.banner a:hover{background:white;color:var(--green)}
+footer{background:var(--deep);color:#d6e0d6;padding:27px 0;font-size:11px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:950px){
+.menu-btn{display:block}
+nav{display:none;position:absolute;top:66px;left:0;right:0;background:var(--green);padding:25px;flex-direction:column;align-items:flex-start}
+nav.open{display:flex}
+.hero,.research-layout,.impact,.teaching{grid-template-columns:1fr}
+.hero-left{padding:65px 6%}
+.hero-right{min-height:480px}
+.research-cards{margin-top:25px}
+.teaching-content{padding:40px 6%}
+}
+@media(max-width:700px){
+.pub-top{flex-direction:column;align-items:flex-start}
+.publication-item{grid-template-columns:1fr;gap:8px}
+.publication-link{justify-self:start;margin-top:8px}
+}
+@media(max-width:600px){
+.logo{font-size:21px}
+.hero h1{font-size:44px}
+.hero-right{min-height:410px}
+.hero-quote{font-size:11px;right:3%}
+.portrait{left:-8%;width:95%}
+.arch{border-width:17px}
+.research-cards{grid-template-columns:1fr;gap:25px}
+.research-card{border-left:0;border-top:1px solid var(--line);padding:20px 0}
+.stats{grid-template-columns:repeat(2,1fr);gap:25px}
+.stat:nth-child(2){border:0}
+.teaching-content{grid-template-columns:1fr}
+.upcoming{border-left:0;border-top:1px solid var(--line);padding:20px 0}
+.banner-inner,.footer-inner{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 
 <body>
-
-<!-- ÜST MENÜ -->
-
 <header>
   <div class="container nav">
-
-    <a class="logo" href="#anasayfa">
-      Dr. Şüheda Baran
-    </a>
-
-    <button
-      class="menu-btn"
-      id="menuBtn"
-      aria-label="Menüyü aç"
-      aria-expanded="false"
-      aria-controls="navigation">
-      ☰
-    </button>
-
+    <a class="logo" href="#anasayfa">Dr. Şüheda Baran</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navigation">☰</button>
     <nav id="navigation">
       <a href="#anasayfa">Ana Sayfa</a>
       <a href="#hakkimda">Hakkımda</a>
@@ -722,489 +153,252 @@ footer {
       <a href="#dersler">Dersler</a>
       <a href="#iletisim">İletişim</a>
     </nav>
-
   </div>
 </header>
 
 <main>
-
-<!-- ANA SAYFA -->
-
 <section class="hero" id="anasayfa">
-
   <div class="hero-left">
-
-    <div class="label">
-      Araştırma · Bilim · Sürdürülebilir Gelecek
-    </div>
-
+    <div class="label">Araştırma · Bilim · Sürdürülebilir Gelecek</div>
     <h1>Dr. Şüheda Baran</h1>
-
-    <p class="hero-subtitle">
-      Uluslararası ticaret, döngüsel ekonomi ve
-      sürdürülebilir kalkınmanın kesişiminde
-      akademik araştırmalar.
-    </p>
-
-    <p class="hero-description">
-      Uluslararası ticaret, döngüsel ekonomi ve
-      sürdürülebilirlik alanlarında çalışmalar
-      yürüten bir araştırmacıyım.
-
-      Araştırmalarımda ekonomik büyüme,
-      çevresel sürdürülebilirlik ve kaynak
-      verimliliği arasındaki ilişkileri
-      incelemeye odaklanıyorum.
-    </p>
-
+    <p class="hero-subtitle">Uluslararası ticaret, döngüsel ekonomi ve sürdürülebilir kalkınmanın kesişiminde akademik araştırmalar.</p>
+    <p class="hero-description">Uluslararası ticaret, döngüsel ekonomi ve sürdürülebilirlik alanlarında çalışmalar yürüten bir araştırmacıyım. Araştırmalarımda ekonomik büyüme, çevresel sürdürülebilirlik ve kaynak verimliliği arasındaki ilişkileri incelemeye odaklanıyorum.</p>
     <div class="buttons">
-
-      <a href="#arastirmalar" class="btn primary">
-        Araştırmalarımı İncele →
-      </a>
-
-      <a href="#hakkimda" class="btn">
-        Hakkımda
-      </a>
-
+      <a href="#arastirmalar" class="btn primary">Araştırmalarımı İncele →</a>
+      <a href="#hakkimda" class="btn">Hakkımda</a>
     </div>
-
-    <!-- GERÇEK AKADEMİK PROFİL BAĞLANTILARI -->
-
     <div class="social">
-
-      <a
-        href="https://scholar.google.com.tr/citations?user=6BTq4ukAAAAJ"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Google Akademik profilim">
-
-        <span class="social-icon">G</span>
-        Google Akademik
-      </a>
-
-      <a
-        href="https://orcid.org/0000-0001-5176-7971"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="ORCID profilim">
-
-        <span class="social-icon orcid">iD</span>
-        ORCID
-      </a>
-
-      <a
-        href="https://www.researchgate.net/profile/Sueheda-Baran"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="ResearchGate profilim">
-
-        <span class="social-icon">R</span>
-        ResearchGate
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/suhedabaran/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn profilim">
-
-        <span class="social-icon linkedin">in</span>
-        LinkedIn
-      </a>
-
+      <a href="https://scholar.google.com.tr/citations?user=6BTq4ukAAAAJ" target="_blank" rel="noopener noreferrer"><span class="social-icon">G</span>Google Akademik</a>
+      <a href="https://orcid.org/0000-0001-5176-7971" target="_blank" rel="noopener noreferrer"><span class="social-icon orcid">iD</span>ORCID</a>
+      <a href="https://www.researchgate.net/profile/Sueheda-Baran" target="_blank" rel="noopener noreferrer"><span class="social-icon">R</span>ResearchGate</a>
+      <a href="https://www.linkedin.com/in/suhedabaran/" target="_blank" rel="noopener noreferrer"><span class="social-icon linkedin">in</span>LinkedIn</a>
     </div>
-
   </div>
-
-  <!-- FOTOĞRAF -->
-
   <div class="hero-right">
-
     <div class="arch"></div>
-
     <div class="plant one">🌿</div>
     <div class="plant two">🌿</div>
-
-    <img
-      class="portrait"
-      src="portrait.png"
-      alt="Dr. Şüheda Baran">
-
-    <div class="hero-quote">
-      Uluslararası Ticaret<br>
-      Kaynak Verimliliği<br>
-      Döngüsel Ekonomi<br>
-      Sürdürülebilir Kalkınma
-    </div>
-
+    <img class="portrait" src="portrait.png" alt="Dr. Şüheda Baran">
+    <div class="hero-quote">Uluslararası Ticaret<br>Kaynak Verimliliği<br>Döngüsel Ekonomi<br>Sürdürülebilir Kalkınma</div>
   </div>
-
 </section>
-
-<!-- HAKKIMDA VE ARAŞTIRMALAR -->
 
 <section class="research" id="hakkimda">
-
   <div class="container research-layout">
-
     <div class="research-title">
-
-      <div class="label">
-        Araştırma Alanlarım
-      </div>
-
-      <h2>
-        Ticaret, Döngüsel<br>
-        Ekonomi ve<br>
-        Sürdürülebilir<br>
-        Bir Gelecek
-      </h2>
-
+      <div class="label">Araştırma Alanlarım</div>
+      <h2>Ticaret, Döngüsel Ekonomi ve Sürdürülebilir Bir Gelecek</h2>
     </div>
-
     <div class="research-cards" id="arastirmalar">
-
       <article class="research-card">
-
         <div class="circle">◎</div>
-
         <h3>Uluslararası Ticaret</h3>
-
-        <p>
-          Uluslararası ticaret politikaları,
-          küresel değer zincirleri,
-          ekonomik büyüme ve
-          sürdürülebilir ticaret uygulamaları.
-        </p>
-
-        <a class="learn" href="#yayinlar">
-          Daha Fazla →
-        </a>
-
+        <p>Uluslararası ticaret politikaları, küresel değer zincirleri, ekonomik büyüme ve sürdürülebilir ticaret uygulamaları.</p>
+        <a class="learn" href="#yayinlar">Yayınları İncele →</a>
       </article>
-
       <article class="research-card">
-
         <div class="circle">↻</div>
-
         <h3>Döngüsel Ekonomi</h3>
-
-        <p>
-          Kaynak verimliliği, döngüsel
-          iş modelleri, sürdürülebilir
-          üretim ve yeşil dönüşüm.
-        </p>
-
-        <a class="learn" href="#yayinlar">
-          Daha Fazla →
-        </a>
-
+        <p>Kaynak verimliliği, döngüsel iş modelleri, sürdürülebilir üretim ve yeşil dönüşüm.</p>
+        <a class="learn" href="#yayinlar">Yayınları İncele →</a>
       </article>
-
       <article class="research-card">
-
         <div class="circle">♧</div>
-
         <h3>Sürdürülebilir Kalkınma</h3>
-
-        <p>
-          Çevresel sürdürülebilirlik,
-          kapsayıcı ekonomik büyüme,
-          yeşil tedarik zinciri ve
-          sürdürülebilir kalkınma politikaları.
-        </p>
-
-        <a class="learn" href="#yayinlar">
-          Daha Fazla →
-        </a>
-
+        <p>Çevresel sürdürülebilirlik, kapsayıcı ekonomik büyüme ve yeşil tedarik zinciri yönetimi.</p>
+        <a class="learn" href="#yayinlar">Yayınları İncele →</a>
       </article>
-
     </div>
-
   </div>
-
 </section>
-
-<!-- AKADEMİK ARAŞTIRMA ODAKLARI -->
 
 <section class="impact">
-
   <div class="impact-image">
-
-    <p>
-      Daha döngüsel,<br>
-      kapsayıcı ve<br>
-      sürdürülebilir<br>
-      bir küresel ekonomi.
-    </p>
-
+    <p>Daha döngüsel,<br>kapsayıcı ve<br>sürdürülebilir<br>bir küresel ekonomi.</p>
   </div>
-
   <div class="impact-right">
-
-    <div class="label">
-      Akademik Çalışma Alanları
-    </div>
-
+    <div class="label">Akademik Çalışma Alanları</div>
     <div class="stats">
-
-      <div class="stat">
-        <strong>01</strong>
-        <span>Uluslararası<br>Ticaret</span>
-      </div>
-
-      <div class="stat">
-        <strong>02</strong>
-        <span>Döngüsel<br>Ekonomi</span>
-      </div>
-
-      <div class="stat">
-        <strong>03</strong>
-        <span>Sürdürülebilir<br>Kalkınma</span>
-      </div>
-
-      <div class="stat">
-        <strong>04</strong>
-        <span>Yeşil Tedarik<br>Zinciri</span>
-      </div>
-
+      <div class="stat"><strong>01</strong><span>Uluslararası<br>Ticaret</span></div>
+      <div class="stat"><strong>02</strong><span>Döngüsel<br>Ekonomi</span></div>
+      <div class="stat"><strong>03</strong><span>Sürdürülebilir<br>Kalkınma</span></div>
+      <div class="stat"><strong>04</strong><span>Yeşil Tedarik<br>Zinciri</span></div>
     </div>
-
   </div>
-
 </section>
-
-<!-- AKADEMİK YAYINLAR -->
 
 <section class="publications" id="yayinlar">
-
-  <div class="container pub-layout">
-
-    <div class="pub-heading">
-
-      <div class="label">
-        Akademik Çalışmalar
+  <div class="container">
+    <div class="pub-top">
+      <div>
+        <div class="label">Akademik Çalışmalar</div>
+        <h2>Yayınlar ve Bilimsel Eserler</h2>
+        <p class="pub-intro">Uluslararası ticaret, döngüsel ekonomi, sürdürülebilir kalkınma, rekabet gücü ve teknolojik dönüşüm alanlarındaki akademik çalışmalarım.</p>
       </div>
-
-      <h2>
-        Seçilmiş<br>
-        Yayınlar
-      </h2>
-
+      <a class="pub-profile" href="https://scholar.google.com.tr/citations?user=6BTq4ukAAAAJ" target="_blank" rel="noopener noreferrer">Google Akademik Profilim ↗</a>
     </div>
-
-    <!--
-      Bu kartlar araştırma temalarını gösterir.
-      Gerçek yayın künyeleriyle değiştirilebilir.
-    -->
-
-    <div class="pub-cards">
-
-      <article class="pub-card">
-
-        <div class="pub-year">
-          Araştırma Alanı · 01
-        </div>
-
-        <h3>
-          Döngüsel Ekonomi Uygulamaları
-          ve Uluslararası Ticaret
-        </h3>
-
-        <em>
-          Döngüsel Ekonomi ve Küresel Ticaret
-        </em>
-
-        <a
-          class="learn"
-          href="https://scholar.google.com.tr/citations?user=6BTq4ukAAAAJ"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Yayınları İncele →
-        </a>
-
-      </article>
-
-      <article class="pub-card">
-
-        <div class="pub-year">
-          Araştırma Alanı · 02
-        </div>
-
-        <h3>
-          Yeşil Tedarik Zinciri Yönetimi
-          ve Sürdürülebilir Ticaret
-        </h3>
-
-        <em>
-          Sürdürülebilirlik ve İşletme Araştırmaları
-        </em>
-
-        <a
-          class="learn"
-          href="https://scholar.google.com.tr/citations?user=6BTq4ukAAAAJ"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Yayınları İncele →
-        </a>
-
-      </article>
-
-      <article class="pub-card">
-
-        <div class="pub-year">
-          Araştırma Alanı · 03
-        </div>
-
-        <h3>
-          Uluslararası Ticaret, Ekonomik
-          Büyüme ve Çevresel Sürdürülebilirlik
-        </h3>
-
-        <em>
-          Uluslararası İktisat Araştırmaları
-        </em>
-
-        <a
-          class="learn"
-          href="https://scholar.google.com.tr/citations?user=6BTq4ukAAAAJ"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Yayınları İncele →
-        </a>
-
-      </article>
-
+    <div class="pub-filters" aria-label="Yayın türleri">
+      <button class="pub-filter active" data-filter="all">Tümü</button>
+      <button class="pub-filter" data-filter="makale">Makaleler</button>
+      <button class="pub-filter" data-filter="kitap">Kitap ve Bölümler</button>
+      <button class="pub-filter" data-filter="bildiri">Bildiriler</button>
+      <button class="pub-filter" data-filter="tez">Tezler</button>
+      <button class="pub-filter" data-filter="rapor">Raporlar</button>
     </div>
-
+    <div class="publication-list" id="publicationList"></div>
+    <p class="pub-count" id="publicationCount"></p>
+    <div class="pub-bottom">
+      <a href="https://www.researchgate.net/profile/Sueheda-Baran" target="_blank" rel="noopener noreferrer">ResearchGate'de Görüntüle ↗</a>
+      <a href="https://avesis.ticaret.edu.tr/sbaran/yayinlar" target="_blank" rel="noopener noreferrer">Akademik Yayın Kayıtları ↗</a>
+    </div>
   </div>
-
 </section>
 
-<!-- VERİLEN DERSLER -->
-
 <section class="teaching" id="dersler">
-
-  <div class="teaching-photo"
-       role="img"
-       aria-label="Üniversite kampüsü görseli">
-  </div>
-
+  <div class="teaching-photo" role="img" aria-label="Üniversite kampüsü görseli"></div>
   <div class="teaching-content">
-
     <div>
-
-      <div class="label">
-        Eğitim ve Öğretim
-      </div>
-
+      <div class="label">Eğitim ve Öğretim</div>
       <h2>Verilen Dersler</h2>
-
       <ul class="courses">
         <li>Uluslararası Ticaret Politikaları</li>
         <li>Enerji, Su ve Çevre</li>
       </ul>
-
     </div>
-
     <div class="upcoming">
-
-      <div class="label">
-        Akademik İlgi Alanları
-      </div>
-
-      <p>
-        Uluslararası Ticaret<br>
-        Sürdürülebilir Kalkınma<br>
-        Döngüsel Ekonomi<br>
-        Yeşil Tedarik Zinciri Yönetimi
-      </p>
-
+      <div class="label">Akademik İlgi Alanları</div>
+      <p>Uluslararası Ticaret<br>Sürdürülebilir Kalkınma<br>Döngüsel Ekonomi<br>Yeşil Tedarik Zinciri Yönetimi</p>
     </div>
-
   </div>
-
 </section>
-
-<!-- İLETİŞİM -->
 
 <section class="banner" id="iletisim">
-
   <div class="container banner-inner">
-
-    <h2>
-      “Bugünün sürdürülebilir ticareti,<br>
-      yarının daha dirençli ekonomisi.”
-    </h2>
-
-    <a
-      href="https://www.linkedin.com/in/suhedabaran/"
-      target="_blank"
-      rel="noopener noreferrer">
-
-      İletişime Geç →
-    </a>
-
+    <h2>“Bugünün sürdürülebilir ticareti,<br>yarının daha dirençli ekonomisi.”</h2>
+    <a href="https://www.linkedin.com/in/suhedabaran/" target="_blank" rel="noopener noreferrer">İletişime Geç →</a>
   </div>
-
 </section>
-
 </main>
 
-<!-- ALT BİLGİ -->
-
 <footer>
-
   <div class="container footer-inner">
-
-    <span>
-      © <span id="year"></span>
-      Dr. Şüheda Baran
-    </span>
-
-    <span>
-      Uluslararası Ticaret · Döngüsel Ekonomi · Sürdürülebilirlik
-    </span>
-
-    <span>
-      Kişisel Akademik Web Sitesi
-    </span>
-
+    <span>© <span id="year"></span> Dr. Şüheda Baran</span>
+    <span>Uluslararası Ticaret · Döngüsel Ekonomi · Sürdürülebilirlik</span>
+    <span>Kişisel Akademik Web Sitesi</span>
   </div>
-
 </footer>
 
 <script>
-const menuBtn = document.getElementById("menuBtn");
-const navigation = document.getElementById("navigation");
+const publications=[
+{year:2025,type:"makale",title:"E7 Ülkelerinde Ekonomik Sürdürülebilirlik Bağlamında Karbon Emisyonunun Ticaret Açıklığı Üzerindeki Etkisi",authors:"Fatih Selamcı, Gencay Karakaya, Şüheda Baran",source:"Banka ve Finans Hukuku Dergisi, 14(56), 697–750",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2025,type:"makale",title:"Küresel İnovasyon Yarışında Teknoloji ve Ticaret İlişkisi: ABD, Birleşik Krallık ve Çin Örneği",authors:"Şüheda Baran Satılmış",source:"İstanbul Ticaret Üniversitesi Girişimcilik Dergisi, 8, 70–94",url:"https://doi.org/10.55830/tje.1699620"},
+{year:2025,type:"makale",title:"Analyzing Competitiveness With The Revealed Comparative Advantage Index: The Case Of Türkiye And Finland",authors:"Şüheda Baran",source:"InTraders International Trade Academic Journal, 8(1), 44–73",url:"https://doi.org/10.55065/intraders.1666559"},
+{year:2025,type:"makale",title:"Bibliometric Analysis of Circular Economy and International Trade",authors:"Şüheda Baran, Elçin Aykaç Alp",source:"Journal of International Trade, Logistics and Law, 11(1)",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2024,type:"makale",title:"Bibliometric Analysis of Artificial Intelligence and International Trade",authors:"Şüheda Baran",source:"Çankırı Karatekin Üniversitesi İİBF Dergisi, 14(4), 1036–1064",url:"https://doi.org/10.18074/ckuiibfd.1472735"},
+{year:2021,type:"makale",title:"The Mediating Role of Innovation Performance on the Relationship between Entrepreneurship Orientation and Competitiveness: A Research in the Export Companies",authors:"Şüheda Baran, N. Öykü İyigün",source:"Journal of International Trade, Logistics and Law, 7(2), 6–15",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2025,type:"kitap",title:"Teknoloji Yönelimi ve Rekabet Gücü Arasındaki İlişkide İnovasyon Performansının Aracılık Rolü: İhracatçı Firmalar Üzerinde Bir Araştırma",authors:"Şüheda Baran Satılmış",source:"Kitap · Hiperlink",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2025,type:"kitap",title:"Endüstride ve Uluslararası Ticarette Döngüsel Ekonomi: Ülkeler Sürdürülebilir Bir Geleceğe Ne Kadar Hazır?",authors:"Şüheda Baran, Elçin Aykaç Alp",source:"Döngüsel Ekonomi ve Sürdürülebilirlik, Hiper Yayın, ss. 68–152 · Kitap Bölümü",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2024,type:"kitap",title:"Yeşil Mutabakat Çerçevesinde Uluslararası Ticaret ve Sürdürülebilirlik",authors:"Şüheda Baran",source:"Sosyal Bilimlerde Sürdürülebilirlik Çalışmaları, Hiper Yayın, ss. 263–285 · Kitap Bölümü",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2021,type:"kitap",title:"Fiyat Algoritmaları ve Rekabet Hukuku",authors:"Aydın Çelen, Şüheda Baran",source:"Yapay Zeka: Güncel Yaklaşımlar ve Uygulamalar, Beta Basım Yayım, ss. 401–435 · Kitap Bölümü",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2025,type:"bildiri",title:"Mapping The Evolution of Circular Economy and Sustainability Research",authors:"Şüheda Baran Satılmış",source:"CESPEU Final Conference, İstanbul · Özet Bildiri",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2025,type:"bildiri",title:"The Impact of Technology-Based Indicators on Trade Openness: An Analysis on European Union Countries",authors:"Şüheda Baran Satılmış",source:"2. International Mtskheta Scientific Research and Innovation Congress · Tam Metin",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2025,type:"bildiri",title:"Competitiveness of Turkey and the Netherlands in Sectors Covered by the Carbon Border Adjustment Mechanism: A Comparative Analysis",authors:"Şüheda Baran Satılmış",source:"7. Bilsel International Efes Scientific Researches and Innovation Congress · Tam Metin",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2025,type:"bildiri",title:"The Impact of Artificial Intelligence on International Trade: The Transformation of Global Value Chain",authors:"Şüheda Baran Satılmış",source:"7th International Spring Conferences · Özet Bildiri",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2023,type:"bildiri",title:"Analysis of Competitiveness of Türkiye Among G7 Countries in terms of Defence Industry",authors:"Şüheda Baran, Halit Ahmet Kahraman",source:"International Conference on Contemporary Issues in Commerce · Özet Bildiri",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2025,type:"tez",title:"Uluslararası Ticaret ve Büyüme İlişkisinin Döngüsel Ekonomi Bağlamında İncelenmesi",authors:"Şüheda Baran",source:"Doktora Tezi · İstanbul Ticaret Üniversitesi",url:"https://avesis.ticaret.edu.tr/tezler/7171aab2-f7a2-4d8f-a9ca-c36adb536abe/uluslararasi-ticaret-ve-buyume-iliskisinin-dongusel-ekonomi-baglaminda-incelenmesi"},
+{year:2021,type:"tez",title:"Teknoloji Yönelimi ve Rekabet Gücü Arasındaki İlişkide İnovasyon Performansının Aracılık Rolü: İhracatçı Firmalar Üzerinde Bir Araştırma",authors:"Şüheda Baran",source:"Yüksek Lisans Tezi · İstanbul Ticaret Üniversitesi",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"},
+{year:2025,type:"rapor",title:"Tekstil Sektörünün Geleceği: Mevcut Durum Değerlendirmesi ve Gelecek Öngörüleri",authors:"M. Sağlam, Şüheda Baran",source:"Teknik Rapor, ss. 1–88",url:"https://avesis.ticaret.edu.tr/sbaran/yayinlar"}
+];
 
-menuBtn.addEventListener("click", () => {
-  const isOpen = navigation.classList.toggle("open");
+const typeNames={
+  makale:"Hakemli Makale",
+  kitap:"Kitap / Kitap Bölümü",
+  bildiri:"Bilimsel Bildiri",
+  tez:"Akademik Tez",
+  rapor:"Teknik Rapor"
+};
 
-  menuBtn.setAttribute(
-    "aria-expanded",
-    String(isOpen)
-  );
+const publicationList=document.getElementById("publicationList");
+const publicationCount=document.getElementById("publicationCount");
 
-  menuBtn.textContent = isOpen ? "✕" : "☰";
-});
+function renderPublications(filter="all"){
+  const filtered=publications
+    .filter(p=>filter==="all"||p.type===filter)
+    .sort((a,b)=>b.year-a.year);
 
-navigation.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navigation.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
-    menuBtn.textContent = "☰";
+  publicationList.replaceChildren();
+
+  filtered.forEach(p=>{
+    const article=document.createElement("article");
+    article.className="publication-item";
+
+    const year=document.createElement("div");
+    year.className="publication-year";
+    year.textContent=p.year;
+
+    const content=document.createElement("div");
+
+    const type=document.createElement("span");
+    type.className="publication-type";
+    type.textContent=typeNames[p.type];
+
+    const title=document.createElement("h3");
+    title.textContent=p.title;
+
+    const authors=document.createElement("p");
+    authors.className="publication-authors";
+    authors.textContent=p.authors;
+
+    const source=document.createElement("p");
+    source.className="publication-source";
+    source.textContent=p.source;
+
+    content.append(type,title,authors,source);
+
+    const link=document.createElement("a");
+    link.className="publication-link";
+    link.href=p.url;
+    link.target="_blank";
+    link.rel="noopener noreferrer";
+    link.textContent="Yayını İncele ↗";
+
+    article.append(year,content,link);
+    publicationList.appendChild(article);
+  });
+
+  publicationCount.textContent=
+    `${filtered.length} akademik eser görüntüleniyor.`;
+}
+
+document.querySelectorAll(".pub-filter").forEach(button=>{
+  button.addEventListener("click",()=>{
+    document.querySelectorAll(".pub-filter")
+      .forEach(b=>b.classList.remove("active"));
+    button.classList.add("active");
+    renderPublications(button.dataset.filter);
   });
 });
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-</script>
+renderPublications();
 
+const menuBtn=document.getElementById("menuBtn");
+const navigation=document.getElementById("navigation");
+
+menuBtn.addEventListener("click",()=>{
+  const open=navigation.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded",String(open));
+  menuBtn.textContent=open?"✕":"☰";
+});
+
+navigation.querySelectorAll("a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    navigation.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded","false");
+    menuBtn.textContent="☰";
+  });
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
