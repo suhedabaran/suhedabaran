@@ -1,242 +1,943 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dr. Suheda Baran | Uluslararası Ticaret ve Döngüsel Ekonomi</title>
-<meta name="description" content="Dr. Suheda Baran: uluslararası ticaret, döngüsel ekonomi, rekabet ve yapay zekâ üzerine araştırmalar.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #F1F4F2;
-    --ink: #14231F;
-    --muted: #4F625C;
-    --green: #1E5C49;
-    --amber: #D9981E;
-    --line: #C9D4CF;
-  }
-  @media (prefers-color-scheme: dark) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dr. Şüheda Baran - Uluslararası Ticaret, Döngüsel Ekonomi ve Sürdürülebilir Kalkınma">
+  <title>Dr. Şüheda Baran | Academic Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
     :root {
-      --bg: #0F1A17;
-      --ink: #E6EEEA;
-      --muted: #9DB1AA;
-      --green: #6FC3A3;
-      --amber: #F0B94B;
-      --line: #263A34;
+      --green: #142e23;
+      --green-light: #254737;
+      --cream: #f5f0e6;
+      --cream-dark: #eae2d4;
+      --ink: #1c211d;
+      --muted: #646a62;
+      --line: #d9d1c4;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
     }
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 1.0625rem;
-    line-height: 1.65;
-  }
-  a { color: var(--green); text-underline-offset: 3px; }
-  a:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
-  .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.5rem; }
 
-  header { padding: 1.25rem 0; }
-  header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
-  .mark { font-family: "Newsreader", Georgia, serif; font-weight: 600; font-size: 1.15rem; text-decoration: none; color: var(--ink); }
-  nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-  nav a { color: var(--muted); text-decoration: none; font-size: 0.98rem; }
-  nav a:hover { color: var(--green); }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  .hero { position: relative; padding: 4.5rem 0 5rem; overflow: hidden; }
-  .hero .wrap { position: relative; z-index: 1; }
-  .hero h1 {
-    font-family: "Newsreader", Georgia, serif;
-    font-weight: 500;
-    font-size: clamp(3rem, 10vw, 6.4rem);
-    line-height: 1;
-    letter-spacing: -0.025em;
-    margin: 0 0 1.5rem;
-  }
-  .hero .role { font-size: 1.2rem; color: var(--muted); max-width: 34rem; margin: 0 0 2rem; }
-  .btns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-  .btn {
-    display: inline-block; padding: 0.7rem 1.3rem; border-radius: 999px;
-    text-decoration: none; font-weight: 600; font-size: 0.98rem;
-    border: 1.5px solid var(--green); color: var(--green);
-  }
-  .btn.primary { background: var(--green); color: var(--bg); }
-  .btn:hover { border-color: var(--amber); }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-  .rings {
-    position: absolute; right: -9rem; top: 50%; width: 38rem; height: 38rem;
-    transform: translateY(-50%); z-index: 0; opacity: 0.9; pointer-events: none;
-  }
-  .rings svg { width: 100%; height: 100%; animation: spin 90s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  @media (prefers-reduced-motion: reduce) { .rings svg { animation: none; } }
-  @media (max-width: 720px) { .rings { width: 24rem; height: 24rem; right: -10rem; opacity: 0.45; } }
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.65;
+    }
 
-  section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
-  .grid { display: grid; grid-template-columns: 12rem 1fr; gap: 2rem; }
-  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; gap: 1rem; } }
-  h2 { font-family: "Newsreader", Georgia, serif; font-weight: 500; font-size: 1.7rem; margin: 0; }
-  .lead { font-family: "Newsreader", Georgia, serif; font-size: 1.45rem; line-height: 1.5; margin: 0; max-width: 40rem; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  .fields { list-style: none; margin: 0; padding: 0; }
-  .fields li { padding: 1.1rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 15rem 1fr; gap: 1.5rem; }
-  .fields li:first-child { padding-top: 0; }
-  .fields li:last-child { border-bottom: 0; }
-  .fields b { font-family: "Newsreader", Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.3; }
-  .fields span { color: var(--muted); }
-  @media (max-width: 720px) { .fields li { grid-template-columns: 1fr; gap: 0.25rem; } }
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
 
-  .timeline { list-style: none; margin: 0; padding: 0; }
-  .timeline li { display: grid; grid-template-columns: 8rem 1fr; gap: 1.5rem; padding: 0 0 1.6rem; }
-  .timeline li:last-child { padding-bottom: 0; }
-  .timeline .when { color: var(--amber); font-weight: 600; }
-  .timeline b { display: block; font-weight: 600; }
-  .timeline span { color: var(--muted); }
-  .sub { font-family: "Newsreader", Georgia, serif; font-size: 1.2rem; font-weight: 600; margin: 2rem 0 1rem; }
-  .sub:first-child { margin-top: 0; }
-  @media (max-width: 720px) { .timeline li { grid-template-columns: 1fr; gap: 0.1rem; } }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-  .pubs { margin: 0; padding-left: 1.2rem; color: var(--muted); }
-  .pubs li { margin-bottom: 0.6rem; }
+    h1, h2, h3, blockquote {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.2;
+    }
 
-  footer { padding: 3rem 0 4rem; color: var(--muted); font-size: 0.95rem; border-top: 1px solid var(--line); }
-</style>
+    h1 {
+      font-size: clamp(3rem, 5vw, 5.8rem);
+      letter-spacing: -0.045em;
+    }
+
+    h2 {
+      font-size: clamp(2.1rem, 3.5vw, 3.6rem);
+      letter-spacing: -0.035em;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+    }
+
+    .eyebrow {
+      font-size: 0.69rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    .container {
+      width: min(1400px, calc(100% - 9%));
+      margin: auto;
+    }
+
+    .section {
+      padding: 95px 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      padding: 14px 24px;
+      border: 1px solid var(--green);
+      font-size: 0.85rem;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline:hover {
+      background: var(--green);
+      color: white;
+    }
+
+    .text-link {
+      display: inline-flex;
+      gap: 15px;
+      align-items: center;
+      font-size: 0.82rem;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 5px;
+    }
+
+    .text-link:hover {
+      border-color: currentColor;
+    }
+
+    /* HEADER */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 240, 230, 0.96);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #718c75;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      font-size: 1.7rem;
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: 56% 44%;
+      min-height: 650px;
+    }
+
+    .hero-content {
+      padding: 100px 9% 65px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      margin-bottom: 28px;
+    }
+
+    .hero-lead {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 2vw, 1.7rem);
+      line-height: 1.4;
+      max-width: 590px;
+      margin-bottom: 24px;
+    }
+
+    .hero-description {
+      max-width: 570px;
+      font-size: 0.95rem;
+      color: #4f554e;
+      margin-bottom: 38px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 55px;
+      font-size: 0.8rem;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    .hero-image {
+      background:
+        linear-gradient(0deg, rgba(10,35,24,.28), transparent 55%),
+        url("portrait.jpg") center / cover,
+        var(--green);
+      position: relative;
+      min-height: 600px;
+    }
+
+    .hero-image::after {
+      content: "TRADE  ·  CIRCULAR ECONOMY  ·  SUSTAINABILITY";
+      position: absolute;
+      bottom: 28px;
+      left: 30px;
+      right: 30px;
+      font-size: 0.65rem;
+      color: white;
+      letter-spacing: 0.2em;
+    }
+
+    /* RESEARCH */
+
+    .research-heading {
+      display: grid;
+      grid-template-columns: 38% 62%;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .research-card {
+      padding: 12px 25px 10px;
+      border-left: 1px solid var(--line);
+    }
+
+    .research-icon {
+      width: 52px;
+      height: 52px;
+      border: 1px solid #b7b5a8;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      margin-bottom: 25px;
+    }
+
+    .research-card h3 {
+      margin-bottom: 15px;
+    }
+
+    .research-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    /* IMPACT */
+
+    .impact {
+      display: grid;
+      grid-template-columns: 42% 58%;
+      background: var(--green);
+      color: var(--cream);
+      min-height: 320px;
+    }
+
+    .impact-image {
+      background:
+        linear-gradient(rgba(9, 31, 22, .15), rgba(9,31,22,.55)),
+        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85")
+        center / cover;
+      display: flex;
+      align-items: end;
+      padding: 50px 9%;
+    }
+
+    .impact-image blockquote {
+      font-style: italic;
+      font-size: clamp(1.6rem, 2.4vw, 2.5rem);
+      max-width: 430px;
+    }
+
+    .impact-content {
+      padding: 70px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .impact-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 25px;
+    }
+
+    .stat {
+      padding: 0 20px;
+      border-left: 1px solid #607467;
+    }
+
+    .stat:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
+
+    .stat strong {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      font-weight: 400;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .stat span {
+      font-size: 0.8rem;
+    }
+
+    /* PUBLICATIONS */
+
+    .publications-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 25px;
+      margin-bottom: 45px;
+    }
+
+    .publications-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .publication-card {
+      padding: 15px 35px;
+      border-left: 1px solid var(--line);
+    }
+
+    .publication-card:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
+
+    .publication-year {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .publication-card h3 {
+      margin-bottom: 15px;
+    }
+
+    .journal {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    /* TEACHING */
+
+    .teaching {
+      display: grid;
+      grid-template-columns: 43% 57%;
+      background: var(--cream-dark);
+    }
+
+    .teaching-image {
+      background:
+        url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=85")
+        center / cover;
+      min-height: 430px;
+    }
+
+    .teaching-content {
+      padding: 75px 9%;
+    }
+
+    .course-list {
+      list-style: none;
+      margin: 25px 0 35px;
+    }
+
+    .course-list li {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--serif);
+      font-size: 1.1rem;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--green);
+      color: var(--cream);
+      padding: 100px 0;
+    }
+
+    .contact-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .contact h2 {
+      max-width: 650px;
+      margin-bottom: 18px;
+    }
+
+    .contact p {
+      color: #c4d0c5;
+      max-width: 550px;
+    }
+
+    .btn-light {
+      border-color: var(--cream);
+      color: var(--cream);
+      white-space: nowrap;
+    }
+
+    .btn-light:hover {
+      background: var(--cream);
+      color: var(--green);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0e241a;
+      color: #d8e0d8;
+      padding: 30px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 0.76rem;
+    }
+
+    /* ANIMATIONS */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1100px) {
+      .nav-links { gap: 15px; }
+      .hero-content { padding: 70px 7%; }
+      .research-heading {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: calc(100% - 40px);
+      }
+
+      .nav { min-height: 70px; }
+      .logo { font-size: 1.3rem; }
+      .menu-toggle { display: block; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px;
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 12px 25px #00000012;
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 8px 0; }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        padding: 65px 25px 45px;
+      }
+
+      .hero-image {
+        min-height: 420px;
+      }
+
+      .social-links {
+        margin-top: 35px;
+      }
+
+      .section { padding: 65px 0; }
+
+      .research-grid,
+      .publications-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .research-card,
+      .publication-card,
+      .publication-card:first-child {
+        border-left: none;
+        border-top: 1px solid var(--line);
+        padding: 25px 0;
+      }
+
+      .impact,
+      .teaching {
+        grid-template-columns: 1fr;
+      }
+
+      .impact-image { min-height: 300px; }
+      .impact-content { padding: 55px 25px; }
+      .teaching-image { min-height: 280px; }
+      .teaching-content { padding: 55px 25px; }
+
+      .impact-stats { gap: 12px; }
+      .stat { padding: 0 10px; }
+      .stat strong { font-size: 2rem; }
+
+      .publications-heading {
+        flex-direction: column;
+      }
+
+      .contact-inner {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <div class="wrap">
-      <a class="mark" href="#top">Suheda Baran</a>
-      <nav aria-label="Ana menü">
-        <a href="#hakkimda">Hakkımda</a>
-        <a href="#arastirma">Araştırma</a>
-        <a href="#egitim">Eğitim ve görev</a>
-        <a href="#yayinlar">Yayınlar</a>
-        <a href="#iletisim">İletişim</a>
-      </nav>
-    </div>
+
+  <!-- NAVIGATION -->
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="#home" class="logo">Dr. Şüheda Baran</a>
+
+      <button class="menu-toggle"
+              aria-label="Menüyü aç"
+              aria-expanded="false"
+              aria-controls="navLinks">
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <main id="top">
-    <div class="hero">
-      <div class="rings" aria-hidden="true">
-        <svg viewBox="0 0 400 400" fill="none">
-          <circle cx="200" cy="200" r="190" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="2 9" opacity="0.6"/>
-          <circle cx="200" cy="200" r="150" stroke="var(--green)" stroke-width="1.5" opacity="0.35"/>
-          <circle cx="200" cy="200" r="110" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="40 14" opacity="0.7"/>
-          <circle cx="200" cy="200" r="70" stroke="var(--amber)" stroke-width="3" stroke-dasharray="120 320" stroke-linecap="round"/>
-          <circle cx="200" cy="200" r="30" fill="var(--green)" opacity="0.18"/>
-        </svg>
-      </div>
-      <div class="wrap">
-        <h1>Dr. Suheda<br>Baran</h1>
-        <p class="role">Uluslararası ticaret alanında doktora. Döngüsel ekonomi, rekabet ve yapay zekânın ticaretle kesiştiği noktaları araştırıyorum.</p>
-        <div class="btns">
-          <a class="btn primary" href="#arastirma">Araştırma alanlarım</a>
-          <a class="btn" href="#iletisim">İletişime geç</a>
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">
+          Research · Impact · A Sustainable Future
+        </p>
+
+        <h1>Dr. Şüheda<br>Baran</h1>
+
+        <p class="hero-lead">
+          Exploring the intersection of international trade,
+          circular economy and sustainable development.
+        </p>
+
+        <p class="hero-description">
+          I am an academic researcher working on international
+          trade, circular economy and sustainability, with a
+          focus on creating inclusive, resilient and
+          environmentally responsible economies.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#research" class="btn btn-primary">
+            Explore My Research <span>→</span>
+          </a>
+          <a href="#about" class="btn btn-outline">
+            About Me
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+          <a href="https://orcid.org/" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+          <a href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
         </div>
       </div>
-    </div>
 
-    <div class="wrap">
-      <section id="hakkimda">
-        <div class="grid">
-          <h2>Hakkımda</h2>
-          <p class="lead">Lisansta İngilizce iktisat, yüksek lisans ve doktorada uluslararası ticaret okudum. 2019 ile 2026 arasında İstanbul Ticaret Üniversitesi’nde araştırma görevlisi olarak çalıştım. Bugün üretimin ve ticaretin nasıl daha rekabetçi ve daha döngüsel olabileceği sorusu üzerine çalışıyorum.</p>
+      <div class="hero-image"
+           role="img"
+           aria-label="Akademik portre fotoğrafı alanı">
+      </div>
+    </section>
+
+    <!-- ABOUT AND RESEARCH -->
+
+    <section class="section" id="about">
+      <div class="container research-heading reveal">
+
+        <div>
+          <p class="eyebrow">Research Areas</p>
+          <h2>
+            Bridging Trade,<br>
+            Circular Economy<br>
+            and a Sustainable<br>
+            Future
+          </h2>
         </div>
-      </section>
 
-      <section id="arastirma">
-        <div class="grid">
-          <h2>Araştırma alanları</h2>
-          <ul class="fields">
-            <li>
-              <b>Döngüsel ekonomi</b>
-              <span>Kaynakların döngüde tutulduğu üretim ve tüketim modelleri, bunların ticaret ve sanayi politikalarıyla ilişkisi.</span>
-            </li>
-            <li>
-              <b>Rekabet</b>
-              <span>Firmaların, sektörlerin ve ülkelerin uluslararası pazarlardaki rekabet gücü.</span>
-            </li>
-            <li>
-              <b>Uluslararası ticaret</b>
-              <span>Ticaret akımları, küresel değer zincirleri ve ticaret politikaları.</span>
-            </li>
-            <li>
-              <b>Yapay zekâ</b>
-              <span>Yapay zekâ teknolojilerinin ticaret, verimlilik ve rekabet üzerindeki etkileri.</span>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <div class="research-grid" id="research">
 
-      <section id="egitim">
-        <div class="grid">
-          <h2>Eğitim ve görev</h2>
-          <div>
-            <p class="sub">Görev</p>
-            <ul class="timeline">
-              <li>
-                <span class="when">2019 – 2026</span>
-                <div><b>Araştırma Görevlisi</b><span>İstanbul Ticaret Üniversitesi</span></div>
-              </li>
-            </ul>
-
-            <p class="sub">Eğitim</p>
-            <ul class="timeline">
-              <!-- Üniversite adlarını ve yıllarını kendine göre yaz -->
-              <li>
-                <span class="when">Yıl – Yıl</span>
-                <div><b>Doktora, Uluslararası Ticaret</b><span>Üniversite adı</span></div>
-              </li>
-              <li>
-                <span class="when">Yıl – Yıl</span>
-                <div><b>Yüksek lisans, Uluslararası Ticaret</b><span>Üniversite adı</span></div>
-              </li>
-              <li>
-                <span class="when">Yıl – Yıl</span>
-                <div><b>Lisans, İngilizce İktisat</b><span>Üniversite adı</span></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="yayinlar">
-        <div class="grid">
-          <h2>Yayınlar</h2>
-          <!-- Kendi yayınlarını bu şekilde ekle, örnekleri sil -->
-          <ol class="pubs">
-            <li>Baran, S. (Yıl). Makale başlığı. <i>Dergi adı</i>, cilt(sayı), sayfa.</li>
-            <li>Baran, S. (Yıl). Bildiri ya da kitap bölümü başlığı. <i>Kitap ya da kongre adı</i>.</li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="iletisim">
-        <div class="grid">
-          <h2>İletişim</h2>
-          <div>
-            <p class="lead">İş birliği, araştırma ya da sorular için yaz.</p>
-            <!-- E-posta adresini ve bağlantıları kendine göre değiştir -->
-            <p><a href="mailto:ornek@suhedabaran.com">ornek@suhedabaran.com</a></p>
+          <article class="research-card">
+            <div class="research-icon">◎</div>
+            <h3>International Trade</h3>
             <p>
-              <a href="https://scholar.google.com/" rel="noopener">Google Scholar</a> &nbsp;
-              <a href="https://orcid.org/" rel="noopener">ORCID</a> &nbsp;
-              <a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a>
+              Trade policies, global value chains,
+              international economic relations and
+              sustainable trade practices.
             </p>
+            <a href="#publications" class="text-link">
+              Learn more →
+            </a>
+          </article>
+
+          <article class="research-card">
+            <div class="research-icon">↻</div>
+            <h3>Circular Economy</h3>
+            <p>
+              Resource efficiency, circular business models,
+              sustainable production and green transition.
+            </p>
+            <a href="#publications" class="text-link">
+              Learn more →
+            </a>
+          </article>
+
+          <article class="research-card">
+            <div class="research-icon">♧</div>
+            <h3>Sustainable Development</h3>
+            <p>
+              Environmental sustainability, inclusive
+              economic growth and resilient economies.
+            </p>
+            <a href="#publications" class="text-link">
+              Learn more →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+
+    <section class="impact">
+      <div class="impact-image">
+        <blockquote>
+          Towards a more circular,
+          inclusive and sustainable
+          global economy.
+        </blockquote>
+      </div>
+
+      <div class="impact-content reveal">
+        <p class="eyebrow">Academic Focus</p>
+
+        <h2>Research with<br>Purpose & Impact</h2>
+
+        <div class="impact-stats">
+          <div class="stat">
+            <strong>01</strong>
+            <span>International<br>Trade</span>
+          </div>
+          <div class="stat">
+            <strong>02</strong>
+            <span>Circular<br>Economy</span>
+          </div>
+          <div class="stat">
+            <strong>03</strong>
+            <span>Sustainable<br>Development</span>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+
+    <section class="section" id="publications">
+      <div class="container">
+
+        <div class="publications-heading reveal">
+          <div>
+            <p class="eyebrow">Academic Work</p>
+            <h2>Selected<br>Publications</h2>
+          </div>
+
+          <a href="https://scholar.google.com/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="text-link">
+            View All Publications →
+          </a>
+        </div>
+
+        <!-- ÖRNEK YAYINLAR: GERÇEK BİLGİLERLE DEĞİŞTİR -->
+
+        <div class="publications-grid">
+
+          <article class="publication-card reveal">
+            <p class="publication-year">Research Theme · 01</p>
+            <h3>
+              Circular Economy Practices and
+              International Trade
+            </h3>
+            <p class="journal">
+              Circular Economy & Global Trade
+            </p>
+            <a href="#contact" class="text-link">
+              Research inquiry →
+            </a>
+          </article>
+
+          <article class="publication-card reveal">
+            <p class="publication-year">Research Theme · 02</p>
+            <h3>
+              Green Supply Chain Management
+              and Sustainable Trade
+            </h3>
+            <p class="journal">
+              Sustainability & Business
+            </p>
+            <a href="#contact" class="text-link">
+              Research inquiry →
+            </a>
+          </article>
+
+          <article class="publication-card reveal">
+            <p class="publication-year">Research Theme · 03</p>
+            <h3>
+              International Trade, Economic Growth
+              and Environmental Sustainability
+            </h3>
+            <p class="journal">
+              International Economics
+            </p>
+            <a href="#contact" class="text-link">
+              Research inquiry →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+
+    <section class="teaching" id="teaching">
+      <div class="teaching-image"
+           role="img"
+           aria-label="Üniversite kampüsü">
+      </div>
+
+      <div class="teaching-content reveal">
+        <p class="eyebrow">Teaching & Education</p>
+        <h2>Courses &<br>Academic Teaching</h2>
+
+        <ul class="course-list">
+          <li>International Trade Policies</li>
+          <li>Energy, Water & Environment</li>
+          <li>Sustainable Development</li>
+          <li>Circular Economy</li>
+        </ul>
+
+        <a href="#contact" class="text-link">
+          Academic Collaboration →
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+      <div class="container contact-inner">
+        <div>
+          <p class="eyebrow">Let's Connect</p>
+          <h2>
+            Sustainable trade today,<br>
+            a more resilient tomorrow.
+          </h2>
+          <p>
+            Open to academic dialogue, interdisciplinary
+            research and international collaboration.
+          </p>
+        </div>
+
+        <!-- E-POSTA ADRESİNİ BURAYA EKLE -->
+        <a href="mailto:email@example.com"
+           class="btn btn-light">
+          Get in Touch →
+        </a>
+      </div>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
+
   <footer>
-    <div class="wrap">© 2026 Suheda Baran</div>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Dr. Şüheda Baran</span>
+      <span>International Trade · Circular Economy · Sustainability</span>
+      <span>Designed for Academic Excellence</span>
+    </div>
   </footer>
+
+  <script>
+    // Mobil menü
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰";
+      });
+    });
+
+    // Sayfa kaydırma animasyonları
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      document.querySelectorAll(".reveal").forEach(el => {
+        observer.observe(el);
+      });
+    } else {
+      document.querySelectorAll(".reveal").forEach(el => {
+        el.classList.add("visible");
+      });
+    }
+
+    // Footer yılı
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
 </body>
 </html>
+
