@@ -903,6 +903,32 @@ footer {
     scroll-behavior:auto;
   }
 }
+  /* DERSLER: GÖRSELSİZ, SADE AKADEMİK TASARIM */
+
+.teaching {
+  display: block;
+  background: #eee8dc;
+  padding: 65px 5%;
+}
+
+.teaching-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 35px;
+}
+
+.teaching-photo {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .teaching-content {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
