@@ -1,12 +1,242 @@
-Hakkımda Projeler İletişim
-Suheda Baran
-Merhaba, ben Suheda. Burada kim olduğumu, neler yaptığımı ve bana nasıl ulaşabileceğini bulabilirsin.
-Hakkımda
-Buraya kendini tanıtan kısa bir yazı ekle: ne iş yaptığın, nelerle ilgilendiğin, neleri sevdiğin.
-Projeler
-Proje adı Projenin ne olduğunu anlatan tek cümle.
-Başka bir proje Bu da ikinci projenin kısa açıklaması.
-İletişim
-Benimle iletişime geçmek için: ornek@suhedabaran.com
-Instagram LinkedIn
-© 2026 Suheda Baran
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Suheda Baran | Uluslararası Ticaret ve Döngüsel Ekonomi</title>
+<meta name="description" content="Dr. Suheda Baran: uluslararası ticaret, döngüsel ekonomi, rekabet ve yapay zekâ üzerine araştırmalar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F1F4F2;
+    --ink: #14231F;
+    --muted: #4F625C;
+    --green: #1E5C49;
+    --amber: #D9981E;
+    --line: #C9D4CF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0F1A17;
+      --ink: #E6EEEA;
+      --muted: #9DB1AA;
+      --green: #6FC3A3;
+      --amber: #F0B94B;
+      --line: #263A34;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  a { color: var(--green); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+  .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  header { padding: 1.25rem 0; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .mark { font-family: "Newsreader", Georgia, serif; font-weight: 600; font-size: 1.15rem; text-decoration: none; color: var(--ink); }
+  nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.98rem; }
+  nav a:hover { color: var(--green); }
+
+  .hero { position: relative; padding: 4.5rem 0 5rem; overflow: hidden; }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero h1 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(3rem, 10vw, 6.4rem);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin: 0 0 1.5rem;
+  }
+  .hero .role { font-size: 1.2rem; color: var(--muted); max-width: 34rem; margin: 0 0 2rem; }
+  .btns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 0.7rem 1.3rem; border-radius: 999px;
+    text-decoration: none; font-weight: 600; font-size: 0.98rem;
+    border: 1.5px solid var(--green); color: var(--green);
+  }
+  .btn.primary { background: var(--green); color: var(--bg); }
+  .btn:hover { border-color: var(--amber); }
+
+  .rings {
+    position: absolute; right: -9rem; top: 50%; width: 38rem; height: 38rem;
+    transform: translateY(-50%); z-index: 0; opacity: 0.9; pointer-events: none;
+  }
+  .rings svg { width: 100%; height: 100%; animation: spin 90s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .rings svg { animation: none; } }
+  @media (max-width: 720px) { .rings { width: 24rem; height: 24rem; right: -10rem; opacity: 0.45; } }
+
+  section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+  .grid { display: grid; grid-template-columns: 12rem 1fr; gap: 2rem; }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; gap: 1rem; } }
+  h2 { font-family: "Newsreader", Georgia, serif; font-weight: 500; font-size: 1.7rem; margin: 0; }
+  .lead { font-family: "Newsreader", Georgia, serif; font-size: 1.45rem; line-height: 1.5; margin: 0; max-width: 40rem; }
+
+  .fields { list-style: none; margin: 0; padding: 0; }
+  .fields li { padding: 1.1rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 15rem 1fr; gap: 1.5rem; }
+  .fields li:first-child { padding-top: 0; }
+  .fields li:last-child { border-bottom: 0; }
+  .fields b { font-family: "Newsreader", Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.3; }
+  .fields span { color: var(--muted); }
+  @media (max-width: 720px) { .fields li { grid-template-columns: 1fr; gap: 0.25rem; } }
+
+  .timeline { list-style: none; margin: 0; padding: 0; }
+  .timeline li { display: grid; grid-template-columns: 8rem 1fr; gap: 1.5rem; padding: 0 0 1.6rem; }
+  .timeline li:last-child { padding-bottom: 0; }
+  .timeline .when { color: var(--amber); font-weight: 600; }
+  .timeline b { display: block; font-weight: 600; }
+  .timeline span { color: var(--muted); }
+  .sub { font-family: "Newsreader", Georgia, serif; font-size: 1.2rem; font-weight: 600; margin: 2rem 0 1rem; }
+  .sub:first-child { margin-top: 0; }
+  @media (max-width: 720px) { .timeline li { grid-template-columns: 1fr; gap: 0.1rem; } }
+
+  .pubs { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+  .pubs li { margin-bottom: 0.6rem; }
+
+  footer { padding: 3rem 0 4rem; color: var(--muted); font-size: 0.95rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="mark" href="#top">Suheda Baran</a>
+      <nav aria-label="Ana menü">
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#arastirma">Araştırma</a>
+        <a href="#egitim">Eğitim ve görev</a>
+        <a href="#yayinlar">Yayınlar</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="rings" aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none">
+          <circle cx="200" cy="200" r="190" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="2 9" opacity="0.6"/>
+          <circle cx="200" cy="200" r="150" stroke="var(--green)" stroke-width="1.5" opacity="0.35"/>
+          <circle cx="200" cy="200" r="110" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="40 14" opacity="0.7"/>
+          <circle cx="200" cy="200" r="70" stroke="var(--amber)" stroke-width="3" stroke-dasharray="120 320" stroke-linecap="round"/>
+          <circle cx="200" cy="200" r="30" fill="var(--green)" opacity="0.18"/>
+        </svg>
+      </div>
+      <div class="wrap">
+        <h1>Dr. Suheda<br>Baran</h1>
+        <p class="role">Uluslararası ticaret alanında doktora. Döngüsel ekonomi, rekabet ve yapay zekânın ticaretle kesiştiği noktaları araştırıyorum.</p>
+        <div class="btns">
+          <a class="btn primary" href="#arastirma">Araştırma alanlarım</a>
+          <a class="btn" href="#iletisim">İletişime geç</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section id="hakkimda">
+        <div class="grid">
+          <h2>Hakkımda</h2>
+          <p class="lead">Lisansta İngilizce iktisat, yüksek lisans ve doktorada uluslararası ticaret okudum. 2019 ile 2026 arasında İstanbul Ticaret Üniversitesi’nde araştırma görevlisi olarak çalıştım. Bugün üretimin ve ticaretin nasıl daha rekabetçi ve daha döngüsel olabileceği sorusu üzerine çalışıyorum.</p>
+        </div>
+      </section>
+
+      <section id="arastirma">
+        <div class="grid">
+          <h2>Araştırma alanları</h2>
+          <ul class="fields">
+            <li>
+              <b>Döngüsel ekonomi</b>
+              <span>Kaynakların döngüde tutulduğu üretim ve tüketim modelleri, bunların ticaret ve sanayi politikalarıyla ilişkisi.</span>
+            </li>
+            <li>
+              <b>Rekabet</b>
+              <span>Firmaların, sektörlerin ve ülkelerin uluslararası pazarlardaki rekabet gücü.</span>
+            </li>
+            <li>
+              <b>Uluslararası ticaret</b>
+              <span>Ticaret akımları, küresel değer zincirleri ve ticaret politikaları.</span>
+            </li>
+            <li>
+              <b>Yapay zekâ</b>
+              <span>Yapay zekâ teknolojilerinin ticaret, verimlilik ve rekabet üzerindeki etkileri.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="egitim">
+        <div class="grid">
+          <h2>Eğitim ve görev</h2>
+          <div>
+            <p class="sub">Görev</p>
+            <ul class="timeline">
+              <li>
+                <span class="when">2019 – 2026</span>
+                <div><b>Araştırma Görevlisi</b><span>İstanbul Ticaret Üniversitesi</span></div>
+              </li>
+            </ul>
+
+            <p class="sub">Eğitim</p>
+            <ul class="timeline">
+              <!-- Üniversite adlarını ve yıllarını kendine göre yaz -->
+              <li>
+                <span class="when">Yıl – Yıl</span>
+                <div><b>Doktora, Uluslararası Ticaret</b><span>Üniversite adı</span></div>
+              </li>
+              <li>
+                <span class="when">Yıl – Yıl</span>
+                <div><b>Yüksek lisans, Uluslararası Ticaret</b><span>Üniversite adı</span></div>
+              </li>
+              <li>
+                <span class="when">Yıl – Yıl</span>
+                <div><b>Lisans, İngilizce İktisat</b><span>Üniversite adı</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="yayinlar">
+        <div class="grid">
+          <h2>Yayınlar</h2>
+          <!-- Kendi yayınlarını bu şekilde ekle, örnekleri sil -->
+          <ol class="pubs">
+            <li>Baran, S. (Yıl). Makale başlığı. <i>Dergi adı</i>, cilt(sayı), sayfa.</li>
+            <li>Baran, S. (Yıl). Bildiri ya da kitap bölümü başlığı. <i>Kitap ya da kongre adı</i>.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="iletisim">
+        <div class="grid">
+          <h2>İletişim</h2>
+          <div>
+            <p class="lead">İş birliği, araştırma ya da sorular için yaz.</p>
+            <!-- E-posta adresini ve bağlantıları kendine göre değiştir -->
+            <p><a href="mailto:ornek@suhedabaran.com">ornek@suhedabaran.com</a></p>
+            <p>
+              <a href="https://scholar.google.com/" rel="noopener">Google Scholar</a> &nbsp;
+              <a href="https://orcid.org/" rel="noopener">ORCID</a> &nbsp;
+              <a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Suheda Baran</div>
+  </footer>
+</body>
+</html>
